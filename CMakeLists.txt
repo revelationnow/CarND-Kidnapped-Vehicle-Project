@@ -5,10 +5,13 @@ project(PARTICLE_FILTER)
 # Build the particle filter project and solution.
 # Use C++11
 set(SRCS src/main.cpp src/particle_filter.cpp)
-set_source_files_properties(${SRCS} PROPERTIES COMPILE_FLAGS -std=c++0x)
+set(TESTS src/main_test.cpp src/particle_filter.cpp)
+set_source_files_properties(${SRCS} PROPERTIES COMPILE_FLAGS -std=c++11)
+set_source_files_properties(${TESTS} PROPERTIES COMPILE_FLAGS -std=c++11)
 
 # Create the executable
 add_executable(particle_filter ${SRCS})
+add_executable(particle_filter_test ${TESTS})
 
 # Use C++11
 #if [ ! -f ./src/particle_filter_sol.cpp]; then
