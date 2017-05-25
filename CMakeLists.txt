@@ -6,6 +6,7 @@ project(PARTICLE_FILTER)
 # Use C++11
 set(SRCS src/main.cpp src/particle_filter.cpp)
 set(TESTS src/main_test.cpp src/particle_filter.cpp)
+set(CMAKE_BUILD_TYPE Debug)
 set_source_files_properties(${SRCS} PROPERTIES COMPILE_FLAGS -std=c++11)
 set_source_files_properties(${TESTS} PROPERTIES COMPILE_FLAGS -std=c++11)
 
